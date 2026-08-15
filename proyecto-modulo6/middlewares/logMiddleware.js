@@ -9,7 +9,7 @@ function logMiddleware(req, res, next) {
     const texto = fechaStr + ' - ' + horaStr + ' - Ruta: ' + req.url + '\n';
 
     const logPath = path.join(__dirname, '..', 'logs', 'log.txt');
-    // appendFile guarda sin borrar lo anterior
+    
     fs.appendFile(logPath, texto, function(err) {
       if (err) {
         console.log('Error al escribir log');
