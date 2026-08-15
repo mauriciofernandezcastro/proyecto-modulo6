@@ -1,0 +1,2 @@
+Este es un archivo estatico servido desde /public
+Para la tarea del modulo 6 - sirve con express.static()

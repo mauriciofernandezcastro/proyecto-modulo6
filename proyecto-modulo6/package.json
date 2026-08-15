@@ -1,0 +1,27 @@
+{
+  "name": "tp-integrador-modulo6",
+  "version": "1.0.0",
+  "description": "Proyecto Modulo 6 - Node & Express Web App - Nota 4",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "modulo6"
+  ],
+  "author": "Mauricio Fernandez Castro",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
