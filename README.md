@@ -1,42 +1,50 @@
-# proyecto-modulo6
-trabajo para aprobar modulo 6
+# Trabajo Modulo 6
 
-# Módulo 6
+Alumno: Mauricio Fernandez Castro
+Proyecto de Node y Express
 
-Proyecto básico para cumplir con la entrega del Módulo 6.
+## Que es esto
+Este es el trabajo del modulo 6. Es un servidor simple que muestra una pagina y un json.
 
-## Requisitos del sistema
-- Node.js v18 o superior
+## Porque use index.js
+Use index.js porque es el que usa todo el mundo por defecto y es mas facil. No hay que configurar nada.
+
+## Carpetas
+- routes: donde estan las rutas
+- controllers: donde esta lo que hacen las rutas
+- middlewares: para guardar el log
+- public: para el archivo estatico info.txt
+- logs: donde se guarda log.txt
+
+Si no usaba /public usaria EJS pero es mas complicado y para un 4 no hace falta.
+
+## Que necesita
+- Node 14 o mas (yo tengo 14.21.3 porque mi mac es High Sierra y no me deja instalar Node 18)
 - npm
 
-## Instalación
-1. Descomprimir el zip
-2. npm install
+## Como instalar
+1. bajar el zip
+2. entrar a la carpeta
+3. npm install
 
-## Ejecución
-- npm start -> inicia con node app.js
-- npm run dev -> inicia con nodemon
+## Como correr
+npm start -> corre normal
+npm run dev -> corre con nodemon y se reinicia solo
 
-Servidor en: http://localhost:3000
-- / -> HTML
-- /status -> JSON
+Yo use esos 2 scripts porque son los que pide el profe.
 
-## Estructura de carpetas
-- app.js: Elegí app.js en vez de index.js porque es más descriptivo para una app Express. Es el estándar que usa la documentación de Express.
-- routes/: Manejo de rutas.
-- controllers/: Lógica de las rutas.
-- middlewares/: Middleware de logs.
-- services/: Carpeta preparada para la lógica de negocio del Módulo 7.
-- public/: Contenido estático servido con express.static().
-- logs/: Persistencia en archivos planos con log.txt.
+Despues abrir en el navegador:
+http://localhost:3000/
+http://localhost:3000/status
+http://localhost:3000/info.txt
 
-## Persistencia en archivos planos
-Se usa fs.appendFile() en middlewares/logger.js. Cada visita a / y /status guarda fecha, hora y ruta accedida en logs/log.txt. Ya tiene 3 registros de ejemplo.
+## El log
+Cada vez que entro a / o /status se guarda en logs/log.txt la fecha y la ruta. Use fs.appendFile como dice la guia. Ya tiene 3 lineas de prueba.
 
-## Scripts
-- start: Para producción.
-- dev: Para desarrollo con reinicio automático con nodemon.
+## Para github
+git init
+git add .
+git commit -m "modulo 6"
+git push
 
-## Justificación de decisiones
-- No uso motor de plantillas (ejs) en esta entrega para mantenerlo simple, se usa HTML estático desde /public, que cumple el requerimiento.
-- Uso dotenv para el puerto, para preparar el proyecto para los Módulos 7 y 8.
+Eso nomas.
