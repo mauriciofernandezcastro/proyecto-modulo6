@@ -1,9 +1,7 @@
-// Middleware que guarda fecha, hora y ruta en logs/log.txt
 const fs = require('fs');
 const path = require('path');
 
 function logMiddleware(req, res, next) {
-  // solo logueamos las rutas principales para cumplir con 3 accesos
   if (req.url === '/' || req.url === '/status') {
     const fecha = new Date();
     const fechaStr = fecha.toLocaleDateString();
@@ -18,7 +16,7 @@ function logMiddleware(req, res, next) {
       }
     });
   }
-  next(); // sigue a la siguiente ruta
+  next();
 }
 
 module.exports = logMiddleware;
