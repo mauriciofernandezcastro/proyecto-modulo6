@@ -1,0 +1,24 @@
+Documento - Reflexion Modulo 6
+Alumno: Mauricio Fernandez Castro
+
+Que hice:
+Hice un servidor con Node y Express. Tiene 2 rutas, la / que muestra HTML y la /status que muestra un JSON. Ademas sirve un archivo estatico de la carpeta public y guarda un log en logs/log.txt.
+
+Que aprendi:
+Aprendi que Express es mas facil que Node puro. Con express.static se sirve lo de public sin hacer mucho codigo. Y con fs.appendFile se puede guardar texto en un archivo sin borrar lo de antes.
+
+Problemas que tuve:
+Mi Mac es High Sierra (10.13) y no me deja instalar Node 18 que pide la guia. Por eso instale Node 14.21.3 que es el ultimo que funciona en mi Mac. Igual funciona bien para el modulo 6.
+
+Estructura:
+Use routes, controllers, middlewares, public y logs porque es lo que pedia la consigna. Elegi index.js porque es el nombre mas comun y no hay que configurar nada raro.
+
+Para el futuro:
+Este servidor queda listo para despues conectarlo a una base de datos en el modulo 7.
+
+Capturas que adjunto:
+1. Terminal con npm run dev funcionando
+2. Navegador en localhost:3000/ y /status
+3. Archivo log.txt con las visitas
+
+https://github.com/mauriciofernandezcastro/proyecto-modulo6.git
